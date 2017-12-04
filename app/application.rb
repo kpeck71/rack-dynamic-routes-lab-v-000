@@ -8,7 +8,7 @@ class Application
       Item.price
     else
       resp.status = 400
-      resp.write = "We don't have that item"
+      resp.write "We don't have that item"
     end
   end
 
