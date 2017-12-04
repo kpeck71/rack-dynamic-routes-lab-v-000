@@ -12,11 +12,11 @@ class Application
         resp.write "#{new_item.price}"
       else
         resp.status = 400
-        resp.write "Item not found."
+        resp.write "Item not found"
       end
     else
       resp.status = 404
-      resp.write "Path not found."
+      resp.write "Path not found"
     end
     resp.finish
   end
