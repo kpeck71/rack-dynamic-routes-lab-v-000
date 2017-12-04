@@ -11,7 +11,7 @@ class Application
       if @@items.include?(new_item)
         new_item.price
       else
-        resp.status = 400
+        resp.status = 404
         resp.write "We don't have that item"
       end
     end
