@@ -14,6 +14,7 @@ class Application
         resp.status = 400
         resp.write "We don't have that item"
       end
+    end
   end
 
 end
