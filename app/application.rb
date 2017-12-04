@@ -1,13 +1,13 @@
 class Application
 
-@@items = [Item.new("item1",15.00), Item.new("item2",2.00)]
+@@items = []
 
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
     if req.path=="/items/"
-      new_item = req.params["item"]
+      new_item = req.path.split("/items/").last
       if @@items.include?(new_item)
         resp.write "#{new_item.price}"
       else
