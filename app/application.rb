@@ -8,7 +8,7 @@ class Application
 
     if req.path.match(/items/)
       new_item = req.params["item"]
-      if items.include? new_item
+      if @@items.include? new_item
         new_item.price
       else
         resp.status = 400
