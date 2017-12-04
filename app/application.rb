@@ -8,7 +8,7 @@ class Application
 
     if req.path=="/items/"
       new_item = req.path.split("/items/").last
-      item_name = @@items.find{|i| i.name == item_name}
+      item_name = @@items.find{|i| i.name == new_item}
       if @@items.include?(new_item)
         resp.write "#{new_item.price}"
       else
