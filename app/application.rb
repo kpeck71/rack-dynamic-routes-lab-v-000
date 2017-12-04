@@ -12,7 +12,7 @@ class Application
         new_item.price
       else
         resp.status = 404
-        resp.write "We don't have that item"
+        resp.write "Item not found."
       end
     end
   end
