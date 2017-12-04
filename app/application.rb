@@ -8,7 +8,7 @@ class Application
 
     if req.path=="/items/"
       #if @@items.include?(new_item)
-        resp.write "#{new_item.price}
+        resp.write "#{new_item.price}"
       else
         resp.status = 404
         resp.write "Item not found."
